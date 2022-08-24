@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/airdrop-frontend/static/css/main.38933501.css",
-    "main.js": "/airdrop-frontend/static/js/main.46c5eb6b.js",
-    "static/media/step1.png": "/airdrop-frontend/static/media/step1.84853bd65065c362f289.png",
-    "static/media/step3.png": "/airdrop-frontend/static/media/step3.80be0f76acb062b745a1.png",
-    "static/media/step5.png": "/airdrop-frontend/static/media/step5.27f5ffd58f184032c8d8.png",
-    "static/media/step4.png": "/airdrop-frontend/static/media/step4.fa42b4f77398c2225146.png",
-    "static/media/step2.png": "/airdrop-frontend/static/media/step2.afa4745254516221ffef.png",
-    "static/media/step7.png": "/airdrop-frontend/static/media/step7.80fa6fdba06027bfed50.png",
-    "static/media/step8.png": "/airdrop-frontend/static/media/step8.00fe7f136cd55502521d.png",
-    "static/media/step6.png": "/airdrop-frontend/static/media/step6.256d197ac12735e93cef.png",
-    "static/media/logo.svg": "/airdrop-frontend/static/media/logo.546d402fe84559a58c678146bf4009a3.svg",
-    "static/media/telegram.png": "/airdrop-frontend/static/media/telegram.e9722f26cc228e817986.png",
-    "static/media/facebook.png": "/airdrop-frontend/static/media/facebook.01a470d813915c298403.png",
-    "index.html": "/airdrop-frontend/index.html",
-    "static/media/info.svg": "/airdrop-frontend/static/media/info.778c45e0ae6951b818d8a6ecc53f74a0.svg",
-    "main.38933501.css.map": "/airdrop-frontend/static/css/main.38933501.css.map",
-    "main.46c5eb6b.js.map": "/airdrop-frontend/static/js/main.46c5eb6b.js.map"
+    "main.css": "/static/css/main.38933501.css",
+    "main.js": "/static/js/main.dd5e1bcd.js",
+    "static/media/step1.png": "/static/media/step1.84853bd65065c362f289.png",
+    "static/media/step3.png": "/static/media/step3.80be0f76acb062b745a1.png",
+    "static/media/step5.png": "/static/media/step5.27f5ffd58f184032c8d8.png",
+    "static/media/step4.png": "/static/media/step4.fa42b4f77398c2225146.png",
+    "static/media/step2.png": "/static/media/step2.afa4745254516221ffef.png",
+    "static/media/step7.png": "/static/media/step7.80fa6fdba06027bfed50.png",
+    "static/media/step8.png": "/static/media/step8.00fe7f136cd55502521d.png",
+    "static/media/step6.png": "/static/media/step6.256d197ac12735e93cef.png",
+    "static/media/logo.svg": "/static/media/logo.546d402fe84559a58c678146bf4009a3.svg",
+    "static/media/telegram.png": "/static/media/telegram.e9722f26cc228e817986.png",
+    "static/media/facebook.png": "/static/media/facebook.01a470d813915c298403.png",
+    "index.html": "/index.html",
+    "static/media/info.svg": "/static/media/info.778c45e0ae6951b818d8a6ecc53f74a0.svg",
+    "main.38933501.css.map": "/static/css/main.38933501.css.map",
+    "main.dd5e1bcd.js.map": "/static/js/main.dd5e1bcd.js.map"
   },
   "entrypoints": [
     "static/css/main.38933501.css",
-    "static/js/main.46c5eb6b.js"
+    "static/js/main.dd5e1bcd.js"
   ]
 }
