@@ -5,6 +5,7 @@
 .home__container h1 {
   font-weight: 700;
   color: #344A8E;
+  text-align: center;
 }
 .spacing {
   padding: 1rem 0;
