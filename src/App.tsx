@@ -6,7 +6,7 @@ import facebook from './assets/facebook.png';
 import info from './assets/info.svg';
 import { useEffect, useState } from 'react';
 import ModalHowto from './components/ModalHowto';
-// import onSubmit from './utils/submit';
+import onSubmit from './utils/submit';
 
 const { Panel } = Collapse;
 
@@ -30,7 +30,7 @@ const App = () => {
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
-    // onSubmit({email, wallet});
+    onSubmit({email, wallet});
   }
 
   useEffect(() => {
