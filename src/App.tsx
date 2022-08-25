@@ -9,6 +9,7 @@ import ModalHowto from './components/ModalHowto';
 import onSubmit from './utils/submit';
 import { CaretUpOutlined } from '@ant-design/icons';
 import toast from 'react-hot-toast';
+import Spinner from './components/Spinner';
 
 const { Panel } = Collapse;
 
@@ -37,7 +38,6 @@ const App = () => {
     setLoading(true);
     await onSubmit({email, wallet});
     toast.success('Congratulations, Thank you for joining our airdrop program!')
-    // window.location.reload(true);
     setEmail('');
     setWallet('');
     setLoading(false);
@@ -127,7 +127,10 @@ const App = () => {
               <Form.Item>
                 { submitAble ?
                   <button onClick={handleSubmit} style={{width: '100%'}} className='button-50'>
-                    Submit
+                    <Row gutter={[8,8]} justify='center'>
+                      <Col>{ loading && <Spinner /> }</Col>
+                      <Col><span>Submit</span></Col>
+                    </Row>
                   </button>
                   :
                   <Button disabled={true} block size='large'>Submit</Button>
