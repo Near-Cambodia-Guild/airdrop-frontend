@@ -38,7 +38,7 @@ const App = () => {
   useEffect(() => {
     window.fbAsyncInit = () => {
       window.FB.init({
-        appId            : '1154272804982160',
+        appId            : '593326535761123',
         autoLogAppEvents : true,
         xfbml            : true,
         version          : 'v11.0'
@@ -68,7 +68,7 @@ const App = () => {
         expandIcon={({ isActive }) => <CaretRightOutlined rotate={isActive ? 90 : 0} />}
         className="site-collapse-custom-collapse"
       >
-        <Panel header="Join @KHNEAR Community on Telegram" key="1" className="site-collapse-custom-panel">
+        <Panel header="Step 1: Join @KHNEAR Community on Telegram" key="1" className="site-collapse-custom-panel">
           <Row justify='center'>
             <button className='button-50'>
               <a style={{color: 'inherit'}} href='https://t.me/khnear' target='_blank' rel="noreferrer">
@@ -84,7 +84,7 @@ const App = () => {
             </button>
           </Row>
         </Panel>
-        <Panel header="Share post on Facebook" key="2" className="site-collapse-custom-panel">
+        <Panel header="Step 2: Share post on Facebook" key="2" className="site-collapse-custom-panel">
           <Row justify='center'>
             <button className='button-50' onClick={onShareClick}>
               <Row gutter={[8,8]} align='middle'>
@@ -101,7 +101,7 @@ const App = () => {
         <Panel 
           header={
             <Row justify='space-between'>
-              <Col><span>Submit Your Wallet Address</span></Col>
+              <Col><span>Step 3: Submit Your Wallet Address</span></Col>
               <Col><img onClick={()=> setVisible(!visible)} src={info} alt='' width={20} /></Col>
             </Row>
           } 
