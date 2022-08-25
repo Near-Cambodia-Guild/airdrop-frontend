@@ -109,10 +109,10 @@ const App = () => {
           <div>
             <Form layout='vertical'>
               <Form.Item label='Email Address:'>
-                <Input value={email} onChange={(e) => setEmail(e.target.value)} size='large' placeholder='Enter email address' />
+                <Input value={email} onChange={(e) => setEmail(e.target.value)} size='large' placeholder='piset@khnear.org' />
               </Form.Item>
               <Form.Item label='Wallet Address:'>
-                <Input value={wallet} onChange={(e) => setWallet(e.target.value)} size='large' placeholder='Enter wallet address' />
+                <Input value={wallet} onChange={(e) => setWallet(e.target.value)} size='large' placeholder='7faf682b....' />
               </Form.Item>
               <Form.Item>
                 <button onClick={handleSubmit} style={{width: '100%'}} className='button-50'>
