@@ -8,6 +8,7 @@ import { useEffect, useState } from 'react';
 import ModalHowto from './components/ModalHowto';
 import onSubmit from './utils/submit';
 import { CaretUpOutlined } from '@ant-design/icons';
+import toast from 'react-hot-toast';
 
 const { Panel } = Collapse;
 
@@ -16,6 +17,7 @@ const App = () => {
   const [submitAble, setSubmitAble] = useState<boolean>(false);
   const [email, setEmail] = useState<string>('');
   const [wallet, setWallet] = useState<string>('');
+  const [loading, setLoading] = useState<boolean>(false);
 
   const onShareClick = () => {
     window.FB.ui({
@@ -30,10 +32,15 @@ const App = () => {
       }
     });
   };
-
-  const handleSubmit = (e: any) => {
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
-    onSubmit({email, wallet});
+    setLoading(true);
+    await onSubmit({email, wallet});
+    toast.success('Congratulations, Thank you for joining our airdrop program!')
+    // window.location.reload(true);
+    setEmail('');
+    setWallet('');
+    setLoading(false);
   }
 
   useEffect(() => {
