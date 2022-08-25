@@ -13,6 +13,7 @@ const { Panel } = Collapse;
 
 const App = () => {
   const [visible, setVisible] = useState<boolean>(false);
+  const [submitAble, setSubmitAble] = useState<boolean>(false);
   const [email, setEmail] = useState<string>('');
   const [wallet, setWallet] = useState<string>('');
 
@@ -23,9 +24,9 @@ const App = () => {
       hashtag: '#KHNEAR',
     }, function(res: any) {
       if (res && !res.error_message) {
-        alert('Posting completed.');
+        setSubmitAble(true);
       } else {
-        alert('Error while posting.');
+        alert('Opps! Please complete the step to get the airdrop.');
       }
     });
   };
@@ -117,9 +118,13 @@ const App = () => {
                 <Input value={wallet} onChange={(e) => setWallet(e.target.value)} size='large' placeholder='7faf682b....' />
               </Form.Item>
               <Form.Item>
-                <button onClick={handleSubmit} style={{width: '100%'}} className='button-50'>
-                  Submit
-                </button>
+                { submitAble ?
+                  <button onClick={handleSubmit} style={{width: '100%'}} className='button-50'>
+                    Submit
+                  </button>
+                  :
+                  <Button disabled={true} block size='large'>Submit</Button>
+                }
               </Form.Item>
             </Form>
           </div>
