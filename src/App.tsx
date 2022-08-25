@@ -19,7 +19,8 @@ const App = () => {
   const onShareClick = () => {
     window.FB.ui({
       method: 'share',
-      href: 'https://developers.facebook.com/docs/',
+      href: 'https://www.facebook.com/khnearguild/posts/pfbid0fHuAt49ANTXzRvWNWiowk8PiNj69AwTg4AvXNz14gaMNDLAFjwJCGj4XSYMATHbql',
+      hashtag: '#KHNEAR',
     }, function(res: any) {
       if (res && !res.error_message) {
         alert('Posting completed.');
