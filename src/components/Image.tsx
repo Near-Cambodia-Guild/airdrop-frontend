@@ -5,7 +5,7 @@ interface Props {
 const Image = ({image}: Props) => {
   return (
     <div className='howto__imgContainer'>
-      <img src={image} alt='' style={{width: '220px'}} />
+      <img src={image} alt='' />
     </div>
   )
 }

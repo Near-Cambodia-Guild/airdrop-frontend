@@ -1,4 +1,4 @@
-import { Col, Collapse, Form, Input, Row } from 'antd';
+import { BackTop, Button, Col, Collapse, Form, Input, Row } from 'antd';
 import { CaretRightOutlined } from '@ant-design/icons';
 import './styles/app.css';
 import telegram from './assets/telegram.png';
@@ -7,6 +7,7 @@ import info from './assets/info.svg';
 import { useEffect, useState } from 'react';
 import ModalHowto from './components/ModalHowto';
 import onSubmit from './utils/submit';
+import { CaretUpOutlined } from '@ant-design/icons';
 
 const { Panel } = Collapse;
 
@@ -124,6 +125,11 @@ const App = () => {
       </Collapse>
 
       <ModalHowto />
+      <BackTop>
+        <Button shape='round' size='large'>
+          <CaretUpOutlined />
+        </Button>
+      </BackTop>
     </div>
   )
 }

@@ -67,6 +67,10 @@
   border: 1px solid gray;
   margin: 8px 0;
 }
+.howto__imgContainer img {
+  object-fit: contain;
+  width: 280px;
+}
 .modal__content {
   /* max-height: 540px;
   overflow: auto; */

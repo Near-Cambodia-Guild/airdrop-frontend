@@ -30,17 +30,18 @@ const ModalHowto = (): JSX.Element => {
       <div className='home__bgStep'>
         <h3>How to create wallet</h3>
       </div>
-      <Row gutter={[8, 8]} justify='space-between'>
-        <Col>
+      <Row gutter={[8, 8]} justify='center'>
+        {/* <Col>
           <Anchor>
             { data.map((i, key) => 
               <Link href={`#step${i.step}`} title={`Step${i.step}: ${i.desc}`} />
             )}
           </Anchor>
-        </Col>
+        </Col> */}
         <Col>
           { data.map((i, key) => 
             <div id={`step${i.step}`}>
+              <p>{`Step${i.step}: ${i.desc}`}</p>
               <Image image={i.img} />
             </div>
           )} 
