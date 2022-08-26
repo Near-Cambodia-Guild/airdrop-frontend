@@ -40,7 +40,7 @@ const ModalHowto = (): JSX.Element => {
         </Col> */}
         <Col>
           { data.map((i, key) => 
-            <div id={`step${i.step}`}>
+            <div key={`step${i.step}`}>
               <p>{`Step${i.step}: ${i.desc}`}</p>
               <Image image={i.img} />
             </div>
