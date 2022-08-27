@@ -15,11 +15,17 @@ const { Panel } = Collapse;
 
 const Home = () => {
   let navigate = useNavigate();
+  const localSubmitAble: boolean = localStorage.getItem('submitAble') === 'true';
   const [visible, setVisible] = useState<boolean>(false);
-  const [submitAble, setSubmitAble] = useState<boolean>(false);
+  const [submitAble, setSubmitAble] = useState<boolean>(localSubmitAble || false);
   const [email, setEmail] = useState<string>('');
   const [wallet, setWallet] = useState<string>('');
   const [loading, setLoading] = useState<boolean>(false);
+  console.log(submitAble);
+  
+  useEffect(() => {
+    setSubmitAble(localSubmitAble);
+  },[submitAble, localSubmitAble]);
 
   const onShareClick = () => {
     window.FB.ui({
@@ -29,8 +35,9 @@ const Home = () => {
     }, function(res: any) {
       if (res && !res.error_message) {
         setSubmitAble(true);
+        localStorage.setItem('submitAble', 'true');
       } else {
-        alert('Opps! Please complete the step to get the airdrop.');
+        // alert('Opps! Please complete the step to get the airdrop.');
       }
     });
   };
@@ -42,6 +49,7 @@ const Home = () => {
     setEmail('');
     setWallet('');
     setLoading(false);
+    localStorage.setItem('submitAble', 'false');
     navigate('/success');
   }
 
