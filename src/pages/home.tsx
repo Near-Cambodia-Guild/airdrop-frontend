@@ -15,37 +15,42 @@ const { Panel } = Collapse;
 
 const Home = () => {
   let navigate = useNavigate();
-  const localSubmitAble: boolean = localStorage.getItem('submitAble') === 'true';
   const [visible, setVisible] = useState<boolean>(false);
-  const [submitAble, setSubmitAble] = useState<boolean>(localSubmitAble || false);
+  const [submitAble, setSubmitAble] = useState<boolean>(false);
   const [email, setEmail] = useState<string>('');
   const [wallet, setWallet] = useState<string>('');
   const [loading, setLoading] = useState<boolean>(false);
-  console.log(submitAble);
-  
-  useEffect(() => {
-    setSubmitAble(localSubmitAble);
-  },[submitAble, localSubmitAble]);
 
-  const onShareClick = () => {
-    console.log(window.FB.Event.subscribe());
-    window.FB.ui({
-      method: 'share',
-      link: 'https://www.facebook.com/khnearguild/posts/pfbid0fHuAt49ANTXzRvWNWiowk8PiNj69AwTg4AvXNz14gaMNDLAFjwJCGj4XSYMATHbql',
-      href: 'https://www.facebook.com/khnearguild/posts/pfbid0fHuAt49ANTXzRvWNWiowk8PiNj69AwTg4AvXNz14gaMNDLAFjwJCGj4XSYMATHbql',
-      hashtag: '#KHNEAR',
-      display: 'iframe'
-    }, function(res: any) {
-      console.log(res);
-      if (res && !res.error_message) {
-        setSubmitAble(true);
-        localStorage.setItem('submitAble', 'true');
-        navigate('/?ref=success');
-      } else {
-        alert('Opps! Please complete the step to get the airdrop.');
+  const onShareClick = async() => {
+    if (navigator.share) {
+      try {
+        await navigator
+          .share({
+            url: 'https://www.facebook.com/khnearguild/posts/pfbid0fHuAt49ANTXzRvWNWiowk8PiNj69AwTg4AvXNz14gaMNDLAFjwJCGj4XSYMATHbql',
+            title: 'hello world',
+            text: 'hello world'
+          })
+          .then(() =>
+            console.log("Hooray! Your content was shared to tha world")
+          );
+      } catch (error) {
+        console.log(`Oops! I couldn't share to the world because: ${error}`);
       }
-    })
+    } else {
+      // fallback code
+      // console.log(
+      //   alert('web share is not supported'),
+      //   "Web share is currently not supported on this browser. Please provide a callback"
+      // );
+      window.FB.ui({
+        method: 'share',
+        link: 'https://www.facebook.com/khnearguild/posts/pfbid0fHuAt49ANTXzRvWNWiowk8PiNj69AwTg4AvXNz14gaMNDLAFjwJCGj4XSYMATHbql',
+        href: 'https://www.facebook.com/khnearguild/posts/pfbid0fHuAt49ANTXzRvWNWiowk8PiNj69AwTg4AvXNz14gaMNDLAFjwJCGj4XSYMATHbql',
+        hashtag: '#KHNEAR',
+      }, function(res: any) {})
+    }
   };
+
   const handleSubmit = async (e: any) => {
     e.preventDefault();
     setLoading(true);
