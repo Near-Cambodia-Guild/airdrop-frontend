@@ -34,7 +34,7 @@ const Home = () => {
       link: 'https://www.facebook.com/khnearguild/posts/pfbid0fHuAt49ANTXzRvWNWiowk8PiNj69AwTg4AvXNz14gaMNDLAFjwJCGj4XSYMATHbql',
       href: 'https://www.facebook.com/khnearguild/posts/pfbid0fHuAt49ANTXzRvWNWiowk8PiNj69AwTg4AvXNz14gaMNDLAFjwJCGj4XSYMATHbql',
       hashtag: '#KHNEAR',
-      mobile_iframe: true,
+      display: 'iframe'
     }, function(res: any) {
       console.log(res);
       if (res && !res.error_message) {
