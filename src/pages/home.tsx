@@ -22,13 +22,14 @@ const Home = () => {
   const [loading, setLoading] = useState<boolean>(false);
 
   const onShareClick = async() => {
+    setSubmitAble(true);
     if (navigator.share) {
       try {
         await navigator
           .share({
             url: 'https://www.facebook.com/khnearguild/posts/pfbid0fHuAt49ANTXzRvWNWiowk8PiNj69AwTg4AvXNz14gaMNDLAFjwJCGj4XSYMATHbql',
-            title: 'hello world',
-            text: 'hello world'
+            title: 'KHNEAR-AIRDROP',
+            text: ''
           })
           .then(() =>
             console.log("Hooray! Your content was shared to tha world")
@@ -59,7 +60,6 @@ const Home = () => {
     setEmail('');
     setWallet('');
     setLoading(false);
-    localStorage.setItem('submitAble', 'false');
     navigate('/success');
   }
 
