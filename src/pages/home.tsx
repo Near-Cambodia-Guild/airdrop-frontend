@@ -31,8 +31,7 @@ const Home = () => {
     window.FB.ui({
       method: 'share',
       href: 'https://www.facebook.com/khnearguild/posts/pfbid0fHuAt49ANTXzRvWNWiowk8PiNj69AwTg4AvXNz14gaMNDLAFjwJCGj4XSYMATHbql',
-      hashtag: '#KHNEAR',
-      display: 'popup'
+      hashtag: '#KHNEAR'
     }, function(res: any) {
       if (res && !res.error_message) {
         setSubmitAble(true);
@@ -41,7 +40,7 @@ const Home = () => {
       } else {
         alert('Opps! Please complete the step to get the airdrop.');
       }
-    });
+    })
   };
   const handleSubmit = async (e: any) => {
     e.preventDefault();
@@ -61,7 +60,7 @@ const Home = () => {
         appId            : '593326535761123',
         autoLogAppEvents : true,
         xfbml            : true,
-        version          : 'v11.0'
+        version          : 'v14.0'
       });
     };
     (function (d, s, id) {
