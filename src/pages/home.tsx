@@ -31,6 +31,7 @@ const Home = () => {
     console.log(window.FB.Event.subscribe());
     window.FB.ui({
       method: 'feed',
+      link: 'https://www.facebook.com/khnearguild/posts/pfbid0fHuAt49ANTXzRvWNWiowk8PiNj69AwTg4AvXNz14gaMNDLAFjwJCGj4XSYMATHbql',
       href: 'https://www.facebook.com/khnearguild/posts/pfbid0fHuAt49ANTXzRvWNWiowk8PiNj69AwTg4AvXNz14gaMNDLAFjwJCGj4XSYMATHbql',
       hashtag: '#KHNEAR'
     }, function(res: any) {
