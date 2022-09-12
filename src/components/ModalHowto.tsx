@@ -1,6 +1,5 @@
-import React from 'react'
 import ReactMarkdown from 'react-markdown';
-import { Anchor, Col, Row, Steps } from 'antd'
+import { Col, Row } from 'antd'
 import step1 from '../assets/howto/step1.png';
 import step2 from '../assets/howto/step2.png';
 import step3 from '../assets/howto/step3.png';
@@ -10,8 +9,6 @@ import step6 from '../assets/howto/step6.png';
 import step7 from '../assets/howto/step7.png';
 import step8 from '../assets/howto/step8.png';
 import Image from './Image';
-
-const { Link } = Anchor;
 
 const ModalHowto = (): JSX.Element => {
   const data = [
