@@ -66,6 +66,7 @@
 }
 
 .howto__imgContainer {
+  display: inline-block;
   border: 1px solid gray;
   margin: 8px 0;
 }

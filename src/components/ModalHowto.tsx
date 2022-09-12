@@ -40,7 +40,9 @@ const ModalHowto = (): JSX.Element => {
           { data.map((i, key) => 
             <div key={`step${i.step}`}>
               <ReactMarkdown children={`**Step${i.step}:** ${i.desc}`} linkTarget={"_blank"} />
-              <Image image={i.img} />
+              <div style={{display: 'flex', justifyContent: 'center'}}>
+                <Image image={i.img} />
+              </div>
             </div>
           )} 
         </Col>
