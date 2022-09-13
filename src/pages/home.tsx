@@ -10,6 +10,7 @@ import info from '../assets/info.svg';
 import facebook from '../assets/facebook.png';
 import telegram from '../assets/telegram.png';
 import { useNavigate } from 'react-router-dom';
+import banner from '../assets/banner.jpg';
 
 const { Panel } = Collapse;
 
@@ -85,6 +86,7 @@ const Home = () => {
     <div className='home__container'>
       <div className='spacing' />
       <h1>KHNEAR Airdrop 🚀</h1>
+      <img alt='' src={banner} style={{width: '100%', borderRadius: '8px', marginBottom: '16px'}} />
       <p>KHNEAR is a chapter of the NEAR.org, a decentralized autonomous organization (DAO). KHNEAR is built with a mission to support and encourage the use of the NEAR Protocol, as well as educate people about Layer 1 blockchain, with the aim of promoting the creative and technological industries of Cambodia.</p>
       <p>To celibrate our first official grand launch event We want onborading new wallet buy providing an airdrop to new wallet with very simple step.</p>
       <div className='home__bgStep'>
