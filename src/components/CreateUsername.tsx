@@ -27,7 +27,7 @@ const CreateUsername = () => {
                     <div key={`step${i.step}`}>
                         <ReactMarkdown children={`**Step${i.step}:** ${i.desc}`} linkTarget={"_self"} />
                         <div style={{display: 'flex', justifyContent: 'center'}}>
-                            <Image image={i.img} />
+                            { i.img && <Image image={i.img} /> }
                         </div>
                     </div>
                 )} 
