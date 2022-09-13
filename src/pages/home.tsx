@@ -28,7 +28,7 @@ const Home = () => {
       try {
         await navigator
           .share({
-            url: 'https://www.facebook.com/khnearguild/posts/pfbid0fHuAt49ANTXzRvWNWiowk8PiNj69AwTg4AvXNz14gaMNDLAFjwJCGj4XSYMATHbql',
+            url: 'https://www.facebook.com/khnearguild/posts/pfbid0279FqHMtXwgKfn9TpKFeMoksMRS2Toe6d6oWsRzkh7Fba5YSV11vMVNJ9ZmNL5GVYl',
             title: 'KHNEAR-AIRDROP',
             text: ''
           })
@@ -46,8 +46,8 @@ const Home = () => {
       // );
       window.FB.ui({
         method: 'share',
-        link: 'https://www.facebook.com/khnearguild/posts/pfbid0fHuAt49ANTXzRvWNWiowk8PiNj69AwTg4AvXNz14gaMNDLAFjwJCGj4XSYMATHbql',
-        href: 'https://www.facebook.com/khnearguild/posts/pfbid0fHuAt49ANTXzRvWNWiowk8PiNj69AwTg4AvXNz14gaMNDLAFjwJCGj4XSYMATHbql',
+        link: 'https://www.facebook.com/khnearguild/posts/pfbid0279FqHMtXwgKfn9TpKFeMoksMRS2Toe6d6oWsRzkh7Fba5YSV11vMVNJ9ZmNL5GVYl',
+        href: 'https://www.facebook.com/khnearguild/posts/pfbid0279FqHMtXwgKfn9TpKFeMoksMRS2Toe6d6oWsRzkh7Fba5YSV11vMVNJ9ZmNL5GVYl',
         hashtag: '#KHNEAR',
       }, function(res: any) {})
     }
