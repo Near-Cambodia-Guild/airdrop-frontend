@@ -11,6 +11,7 @@ import facebook from '../assets/facebook.png';
 import telegram from '../assets/telegram.png';
 import { useNavigate } from 'react-router-dom';
 import banner from '../assets/banner.jpg';
+import CreateUsername from '../components/CreateUsername';
 
 const { Panel } = Collapse;
 
@@ -22,9 +23,25 @@ const Home = () => {
   const [wallet, setWallet] = useState<string>('');
   const [loading, setLoading] = useState<boolean>(false);
 
+  function detectMob() {
+    const toMatch = [
+        /Android/i,
+        /webOS/i,
+        /iPhone/i,
+        /iPad/i,
+        /iPod/i,
+        /BlackBerry/i,
+        /Windows Phone/i
+    ];
+    
+    return toMatch.some((toMatchItem) => {
+        return navigator.userAgent.match(toMatchItem);
+    });
+  }
+
   const onShareClick = async() => {
     setSubmitAble(true);
-    if (navigator.share) {
+    if (navigator.share && detectMob()) {
       try {
         await navigator
           .share({
@@ -163,7 +180,32 @@ const Home = () => {
         </Panel>
       </Collapse>
 
-      <ModalHowto />
+      <div style={{margin: '32px 0'}} />
+
+      <div className='home__bgStep'>
+        <h3>FAQs</h3>
+      </div>
+      <Collapse
+        bordered={false}
+        expandIcon={({ isActive }) => <CaretRightOutlined rotate={isActive ? 90 : 0} />}
+        className="site-collapse-custom-collapse"
+      >
+        <Panel  
+          header='How to Create Wallet'
+          key="1" 
+          className="site-collapse-custom-panel"
+        >
+          <ModalHowto />
+        </Panel>
+        <Panel  
+          header='How to Reserve Account ID'
+          key="2" 
+          className="site-collapse-custom-panel"
+        >
+          <CreateUsername />
+        </Panel>
+      </Collapse>
+      <div style={{margin: '40px 0'}} />
       <BackTop>
         <Button shape='round' size='large'>
           <CaretUpOutlined />

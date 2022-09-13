@@ -24,21 +24,10 @@ const ModalHowto = (): JSX.Element => {
 
   return (
     <div className='modal__content'>
-      <br />
-      <div className='home__bgStep'>
-        <h3>How to create wallet</h3>
-      </div>
       <Row gutter={[8, 8]} justify='center'>
-        {/* <Col>
-          <Anchor>
-            { data.map((i, key) => 
-              <Link href={`#step${i.step}`} title={`Step${i.step}: ${i.desc}`} />
-            )}
-          </Anchor>
-        </Col> */}
         <Col>
           { data.map((i, key) => 
-            <div key={`step${i.step}`}>
+            <div key={`step${i.step}`} id={`wc-step${i.step}`}>
               <ReactMarkdown children={`**Step${i.step}:** ${i.desc}`} linkTarget={"_blank"} />
               <div style={{display: 'flex', justifyContent: 'center'}}>
                 <Image image={i.img} />
