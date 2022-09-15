@@ -105,7 +105,7 @@ const Home = () => {
       <h1>KHNEAR Airdrop 🚀</h1>
       <img alt='' src={banner} style={{width: '100%', borderRadius: '8px', marginBottom: '16px'}} />
       <p>KHNEAR is a chapter of the NEAR.org, a decentralized autonomous organization (DAO). KHNEAR is built with a mission to support and encourage the use of the NEAR Protocol, as well as educate people about Layer 1 blockchain, with the aim of promoting the creative and technological industries of Cambodia.</p>
-      <p>To celibrate our first official grand launch event We want onborading new wallet buy providing an airdrop to new wallet with very simple step.</p>
+      <p>To celebrate our first official grand launch event We want onborading new wallet buy providing an airdrop to new wallet with very simple step.</p>
       <div className='home__bgStep'>
         <h3>3 Step To Get Airdrop</h3>
       </div>
@@ -157,8 +157,8 @@ const Home = () => {
         >
           <div>
             <Form layout='vertical'>
-              <Form.Item label='Email Address:'>
-                <Input value={email} onChange={(e) => setEmail(e.target.value)} size='large' placeholder='piset@khnear.org' />
+              <Form.Item label='Telegram Username:'>
+                <Input value={email} onChange={(e) => setEmail(e.target.value)} size='large' placeholder='@combo23' />
               </Form.Item>
               <Form.Item label='Wallet Address:'>
                 <Input value={wallet} onChange={(e) => setWallet(e.target.value)} size='large' placeholder='7faf682b....' />
